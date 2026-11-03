@@ -1,0 +1,28 @@
+{
+  "name": "studiospace-api",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "exports": "./src/app.js",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node --env-file=.env --watch src/local.js",
+    "start": "node src/local.js",
+    "seed": "node --env-file=.env scripts/seed.js",
+    "test": "node --test test/*.test.js",
+    "setup": "node scripts/setup-env.js"
+  },
+  "dependencies": {
+    "@better-auth/mongo-adapter": "1.7.15",
+    "better-auth": "1.7.15",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "jose": "^6.1.0",
+    "mongodb": "^7.0.0"
+  }
+}
